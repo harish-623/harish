@@ -1,1 +1,560 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harish Nallabothula | Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --dark-bg: #0f172a;
+        --card-bg: #ffffff;
+        --text-main: #1e293b;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Hero Section */
+      #home {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+      }
+
+      .hero-title {
+        font-weight: 700;
+        font-size: 3.5rem;
+        color: var(--dark-bg);
+      }
+
+      .accent-text {
+        color: var(--primary-color);
+      }
+
+      /* Section Styling */
+      section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        font-weight: 700;
+        margin-bottom: 50px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 4px;
+        background: var(--primary-color);
+        bottom: -10px;
+        left: 0;
+      }
+
+      /* Cards & Skills */
+      .skill-badge {
+        background: #eef2ff;
+        color: var(--primary-color);
+        padding: 8px 15px;
+        border-radius: 50px;
+        display: inline-block;
+        margin: 5px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid #dbeafe;
+      }
+
+      .project-card {
+        border: none;
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .experience-border {
+        border-left: 3px solid var(--primary-color);
+        padding-left: 20px;
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .award-box {
+        background: #fff9db;
+        border-left: 5px solid #fcc419;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      /* Contact Section */
+      .contact-info i {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+      }
+
+      footer {
+        background: var(--dark-bg);
+        color: white;
+        padding: 30px 0;
+      }
+
+      /* Animations */
+      .fade-in {
+        animation: fadeIn 1.5s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">NH</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul
+            class="navbar-nav ms-auto text-uppercase fw-semibold"
+            style="font-size: 0.85rem"
+          >
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 fade-in">
+            <h5 class="text-primary fw-bold mb-3">WELCOME TO MY WORLD</h5>
+            <h1 class="hero-title">
+              Hi, I'm <span class="accent-text">Harish Nallabothula</span>
+            </h1>
+            <h2 class="h4 mb-4 text-secondary">
+              Software Engineer & RPA Developer
+            </h2>
+            <p class="lead mb-5">
+              Specializing in Java, Spring Boot, and Microsoft Power Automate to
+              build scalable automation solutions that optimize business
+              processes.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#projects" class="btn btn-primary btn-lg px-4 shadow"
+                >View My Work</a
+              >
+              <a href="#contact" class="btn btn-outline-dark btn-lg px-4"
+                >Contact Me</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <img
+              src="https://img.freepik.com/free-vector/rpa-concept-illustration_114360-10103.jpg"
+              class="img-fluid rounded shadow-lg"
+              alt="Automation Illustration"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="section-title">About Me</h2>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="mb-4">A Brief Introduction</h3>
+            <p>
+              I am a Software Engineer with over 2 years of expertise in
+              <strong>Robotic Process Automation (RPA)</strong> and
+              <strong>Java development</strong>. I focus on designing and
+              implementing scalable solutions that bridge the gap between
+              complex manual workflows and efficient digital automation.
+            </p>
+            <p>
+              Currently, I leverage low-code platforms like
+              <strong>Microsoft Power Automate</strong> alongside traditional
+              backend frameworks like <strong>Spring Boot</strong> to deliver
+              end-to-end impact.
+            </p>
+
+            <div class="award-box mt-4">
+              <h5 class="fw-bold">
+                <i class="fas fa-trophy me-2 text-warning"></i>GEP Spot
+                Recognition Award (Q1 2024)
+              </h5>
+              <p class="small mb-0">
+                Awarded for developing an automation bot that significantly
+                enhanced project efficiency and ensured timely delivery.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ps-lg-5">
+              <h3 class="mb-4">Work Experience</h3>
+              <div class="experience-border">
+                <h5 class="fw-bold">Software Engineer</h5>
+                <p class="text-primary mb-1">06/2023 – Present</p>
+                <p class="small">
+                  Designed and implemented RPA solutions using Power Automate,
+                  Java, and Spring Boot. Collaborated with AI teams to integrate
+                  machine learning models into decision-making workflows.
+                </p>
+              </div>
+              <div class="experience-border">
+                <h5 class="fw-bold">AWS Cloud Virtual Intern</h5>
+                <p class="text-primary mb-1">10/2021 – 12/2021</p>
+                <p class="small">
+                  Mastered AWS Cloud foundations through practical hands-on
+                  experience under AICTE and AWS Academy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="bg-light">
+      <div class="container text-center">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="row mt-4">
+          <div class="col-md-4 mb-4">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+              <i class="fas fa-code fa-3x text-primary mb-3"></i>
+              <h5>Languages</h5>
+              <div class="mt-3">
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">HTML</span>
+                <span class="skill-badge">SQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+              <i class="fas fa-layer-group fa-3x text-primary mb-3"></i>
+              <h5>Frameworks & RPA</h5>
+              <div class="mt-3">
+                <span class="skill-badge">Spring Boot</span>
+                <span class="skill-badge">Angular</span>
+                <span class="skill-badge">Power Automate</span>
+                <span class="skill-badge">Selenium</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+              <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+              <h5>Tools & Cloud</h5>
+              <div class="mt-3">
+                <span class="skill-badge">AWS</span>
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">Jira</span>
+                <span class="skill-badge">VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Key Projects</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-body p-4">
+                <div class="text-primary mb-3">
+                  <i class="fas fa-file-invoice fa-2x"></i>
+                </div>
+                <h5 class="card-title fw-bold">Invoice Processing</h5>
+                <p class="card-text small text-secondary">
+                  Developed an automated bot for GEP Smart to validate and
+                  upload templated invoice data to RPA portals, increasing
+                  accuracy by 95%.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-body p-4">
+                <div class="text-primary mb-3">
+                  <i class="fas fa-user-edit fa-2x"></i>
+                </div>
+                <h5 class="card-title fw-bold">Valeo Profile Update</h5>
+                <p class="card-text small text-secondary">
+                  Created an email automation bot that extracts user profile
+                  data and updates the GEP System automatically.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-body p-4">
+                <div class="text-primary mb-3">
+                  <i class="fas fa-download fa-2x"></i>
+                </div>
+                <h5 class="card-title fw-bold">HPE Invoice Downloader</h5>
+                <p class="card-text small text-secondary">
+                  Bot designed to fetch invoice copies for specific users and
+                  auto-store them in designated FTP locations.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-body p-4">
+                <div class="text-primary mb-3">
+                  <i class="fas fa-key fa-2x"></i>
+                </div>
+                <h5 class="card-title fw-bold">Hourly Token Refresh</h5>
+                <p class="card-text small text-secondary">
+                  Implemented a background automation to refresh system tokens
+                  hourly, reducing manual intervention and downtime.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-body p-4">
+                <div class="text-primary mb-3">
+                  <i class="fas fa-envelope-open-text fa-2x"></i>
+                </div>
+                <h5 class="card-title fw-bold">Philips SICR Implementation</h5>
+                <p class="card-text small text-secondary">
+                  Complex bot for invoice comparison, filtering recent updates,
+                  and distributing specific files to recipients via automated
+                  emails.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card bg-primary text-white">
+              <div
+                class="card-body p-4 d-flex flex-column justify-content-center align-items-center text-center"
+              >
+                <h5>View More Work</h5>
+                <p class="small">Interested in more? Let's connect!</p>
+                <a
+                  href="mailto:nharish86238@gmail.com"
+                  class="btn btn-light btn-sm mt-2"
+                  >Email Me</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="section-title">Get In Touch</h2>
+          </div>
+          <div class="col-lg-5">
+            <h4 class="mb-4">Contact Information</h4>
+            <div class="contact-info mb-4 d-flex align-items-center">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <p class="mb-0 fw-bold">Email</p>
+                <p class="mb-0">nharish86238@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-info mb-4 d-flex align-items-center">
+              <i class="fas fa-phone"></i>
+              <div>
+                <p class="mb-0 fw-bold">Phone</p>
+                <p class="mb-0">+91 9618575789</p>
+              </div>
+            </div>
+            <div class="contact-info mb-4 d-flex align-items-center">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <p class="mb-0 fw-bold">Location</p>
+                <p class="mb-0">Hyderabad, Telangana, India</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary px-5 py-2">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container text-center">
+        <div class="mb-4">
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="mb-0 small text-secondary">
+          © 2025 Harish Nallabothula. Built with Bootstrap & Passion.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Smooth Scrolling for nav links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+          });
+        });
+      });
+
+      // Form Submission logic
+      document
+        .getElementById('contactForm')
+        .addEventListener('submit', function (e) {
+          e.preventDefault();
+          alert('Thank you, Harish will get back to you soon!');
+          this.reset();
+        });
+
+      // Sticky Navbar background change on scroll
+      window.addEventListener('scroll', function () {
+        const nav = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        } else {
+          nav.style.boxShadow = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
